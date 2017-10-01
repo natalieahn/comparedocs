@@ -1,2 +1,2 @@
 # comparedocs
-Some basic stuff for comparing similar documents
+Some basic functions for comparing similar documents
