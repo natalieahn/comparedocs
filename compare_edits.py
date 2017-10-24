@@ -55,10 +55,10 @@ def MatchingSegmentStats(a, b):
 	match_lengths = [len(text) for start,change,text in edits if change==' ']
 	if len(match_lengths) == 0: return 0
 	return {'max_match_len':max(match_lengths),
-			'avg_match_len':mean(match_lengths),
-			'tot_match_len':sum(match_lengths),
-			'num_edits':len(edits) - len(match_lengths),
-			'pct_matching':100*sum(match_lengths) / mean([len(a),len(b)])}
+		'avg_match_len':mean(match_lengths),
+		'tot_match_len':sum(match_lengths),
+		'num_edits':len(edits) - len(match_lengths),
+		'pct_matching':100*sum(match_lengths) / mean([len(a),len(b)])}
 
 # Example Use
 a = 'insert version 1 of the same text'
