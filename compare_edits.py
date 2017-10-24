@@ -34,15 +34,15 @@ def CompareStringEdits(a, b):
 # Example Use
 a = 'insert the original text'
 b = 'insert a revised version of the text'
-difs = CompareStringEdits(a, b)
-for dif in difs:
-	print('positions %d - %d: %s %s' % (dif[0], dif[0] + len(dif[1]), dif[1], dif[2]))
+edits = CompareStringEdits(a, b)
+for start,change,text in edits:
+	print('positions %.2d - %.2d: %s %s' % (start, start + len(text), change, text))
 
 # Prints Out:
 '''
-positions 0 - 1:   insert 
-positions 1 - 2: + a revised version of 
-positions 5 - 6:   the 
-positions 6 - 7: - original 
-positions 7 - 8:   text
+positions 00 - 07:   insert 
+positions 01 - 22: + a revised version of 
+positions 05 - 09:   the 
+positions 06 - 15: - original 
+positions 07 - 11:   text
 '''
